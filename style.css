@@ -1,190 +1,109 @@
-/* Setting background color, adding font sizes/families/color and other attributes for the h1, h3, h4, h5, h6 and p elements */
+/* remove default margin and padding from body */
 body {
-  background: #dee6d5;
-  margin-left:45px;
-  margin-right:45px;
-    
+  padding: 0;
+  margin: 0;
 }
-
-h1 {
-  font-size: 80px;
-}
-h4 {
-  font-size: 40px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #4aaaa5;
-  font-weight: bold;
-  overflow: hidden;
-
-}
-h3 {
-  font-size: 50px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #4aaaa5;
-  font-weight: bold;
-
-}
-
-h5 {
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #4aaaa5;
-  font-weight: bold;
-  text-align: center;
-  }
-
-h6 {
-font-size: 20px;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-  line-height: 2;
-}
-
-/* Giving our navbar some padding and a background color */
-.navbar {
-  margin-left:-45px;
-  margin-right:-45px;
-  background: #ffffff;
-}
-
-
-
-.fig-image {
-height: auto; 
-width: 660px; 
-}
-
-.thumbnail {
-  border: #ffffff;
-}
-
-
-/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
-.navbar li {
+p{
+  color: silver
   
-  margin-right: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-  background: #ffffff;
-  border-radius: 3px;
+}
+/* set map, body, and html to 100% of the screen size */
+#map,
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.watermarked {
+  position: fixed;
+  top:450;
+  left:0;
+  right:0;
+  opacity: 50;
+  z-index:-1;
+}
+.box-text {
+  margin-top:250px auto;
+  align-self: center, center;
+  width: 320px;
+  padding: 50px;
+  color: whitesmoke;
+  background-position: center, center;
+  background-color:rgba(100, 100, 100, 0.63);
+  border: 2px solid rgba(100, 100, 100, 0.63);
+  margin: 0;
+  z-index: 1;
+
 }
 
-/* Getting rid of the default link styles here */
-.navbar li a {
-  color: #000;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.white{
+  background-color:#fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Styling the header, giving it a height, a background color, and some top padding */
-.header {
-  height: 200px;
-  padding-top: 20px;
-  background: #2bbadd;
+.navbar a:hover {
+  background-color: #333;
 }
 
-/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
-.header h1 {
-  padding: 60px;
+
+img.resize {
+  min-width:85%;
+
+}
+
+.container3 {
+  padding-top: 200 px;
+  height: 10em;
+  position: relative;
+}
+.container4 {
+  padding-top:250px;
+  height: 10em;
+  position: relative }
+
+#text-box{
+  padding-top: 250px;
+  align-self: center, center,250px;
+  width: 320px;
+  padding: 50px;
+  color: whitesmoke;
+  background-position: center, center,250px;
+  background-color:rgb(20, 20, 20, 0.75);
+  border: 2px solid rgb(20, 20, 20, 0.75);
   margin: 0;
-  color: #000;
-  text-align: center;
+  z-index: 1;
+}
+/* unvisited link */
+a:link {
+  color: white;
 }
 
-/* Giving the .post element margin on 3 sides */
-.post {
-  margin-top: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
-}
-/*Setting padding and background color for demobox*/
-#demobox {
-  background-color: #ffffff ;
-  padding: 40px ;
-  
-}
-/*Setting background color, padding and alignment for the navigation box*/
-#navbox {
-  background-color: #ffffff ;
-  padding: 20px ;
-  text-align:center;
-}
-/*Setting image sizes for navigation box*/
-#navbox img {
-  width: 175px;
-  height: 175px;
-}
-/*Setting background color and padding for the comarison box*/
-#comparebox {
-  background-color: #ffffff ;
-  padding-left: 80px ;
-  padding-right: 80px ;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-/*Setting background color, padding and hiding overflow for databox*/
-#databox {
-  background-color: #ffffff ;
-  padding-left: 80px ;
-  padding-right: 80px ;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  overflow: hidden;
-}
-/*Changing visibility of nav-select*/
-#nav-select {
-  visibility: hidden;
+/* visited link */
+a:visited {
+  color: gray;
 }
 
-/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
-@media (max-width: 480px) {
-  .navbar li {
-    padding: 10px;
-    background: #ffffff;
-  }
+/* mouse over link */
+a:hover {
+  color: silver;
+}
 
-  .post {
-    margin-right: 30px;
-    margin-left: 30px;
-  }
-  .navbar {
-    background: #4aaaa5;
-  }
-  .navbar ul {
-    visibility: visible;
-    background: #ffffff;
-    }
-  #dropdown-toggle {
-    background: #ffffff;
-  }
-  .dropdown {
-    background: #ffffff;
-  }
-  #dropdown-menu {
-    background: #ffffff;
-  }
-  #nav-select {
-    visibility: visible;
-    background: #ffffff;
-    }
-    .fig-image {
-      max-width: 400px; 
-      max-height: 275px;
-      }    
-    }
-/*Setting screen size for fig images*/
-@media (max-width: 1160px) {
-  .fig-image {
-    max-width: 500px; 
-    max-height: 343.75px;
-    }    
-    }
-
-@media (max-width: 643px) {
-  .fig-image {
-    max-width: 300px; 
-    max-height: 206.25px;
-    }              
-
+/* selected link */
+a:active {
+  color: darkgray;
 }
